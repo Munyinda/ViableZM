@@ -1,0 +1,19 @@
+{
+  "name": "munyindamazaka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "brain.js": "^2.0.0-beta.2",
+    "http": "0.0.1-security",
+    "mac-http-module": "0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "author": "",
+  "license": "ISC",
+  "gypfile": true
+}
