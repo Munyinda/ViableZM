@@ -1,0 +1,121 @@
+###
+POST http://localhost:3000/token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6Im1hcmsiLCJyb2xlcyI6W3sicHJpdmlsZWdlcyI6W10sIl9pZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YyIsIm5hbWUiOiJzZWxsZXIifV0sImVtcGxveWluZ1N0b3JlcyI6W3siX2lkIjoiNWYxODMyNWQ2YjhmYmExMGE4ZmY2ZjVkIiwic3RvcmVJZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YSIsInN0b3JlTmFtZSI6Im1hcmt1c1Nob2VzIn1dfSwiaWF0IjoxNjAwNDU4NTc2LCJleHAiOjE2MDA1NDQ5NzZ9.sSr4b7AH-SFSnHb-bl55-nOcoShSxgJ4nnjCDLTRgZc
+
+###
+DELETE http://localhost:3000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6Im1hcmsiLCJyb2xlcyI6W3sicHJpdmlsZWdlcyI6W10sIl9pZCI6IjVlZmM4MjZhMjhmZGIzMDE1MDM2NjcxNiIsIm5hbWUiOiJidXllciJ9XX0sImlhdCI6MTU5NTE1Mjg5OSwiZXhwIjoxNTk1MjM5Mjk5fQ.7xrz8C1bD9EPowZTH5XCxv-HyJwb1FAHx_RmLKFjiYs
+
+{
+    "message":"SUCCESS",
+    "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6Im1hcmsiLCJyb2xlcyI6W3sicHJpdmlsZWdlcyI6W10sIl9pZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YyIsIm5hbWUiOiJzZWxsZXIifV0sImVtcGxveWluZ1N0b3JlcyI6W3siX2lkIjoiNWYxODMyNWQ2YjhmYmExMGE4ZmY2ZjVkIiwic3RvcmVJZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YSIsInN0b3JlTmFtZSI6Im1hcmt1c1Nob2VzIn1dfSwiaWF0IjoxNTk2NjQ4OTE4LCJleHAiOjE1OTY2NTI1MTh9.DC0wwvp4CnffGFqCVBTClasfmzcPUwkRRSrfjUmpXPg"
+    }
+
+### STORE UPDATING
+PATCH http://localhost:3000/store/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6Im1hcmsiLCJyb2xlcyI6W3sicHJpdmlsZWdlcyI6W10sIl9pZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YyIsIm5hbWUiOiJzZWxsZXIifV0sImVtcGxveWluZ1N0b3JlcyI6W3siX2lkIjoiNWYxODMyNWQ2YjhmYmExMGE4ZmY2ZjVkIiwic3RvcmVJZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YSIsInN0b3JlTmFtZSI6Im1hcmt1c1Nob2VzIn1dfSwiaWF0IjoxNTk5OTE2NTY4LCJleHAiOjE1OTk5MjAxNjh9.12-IEVz3sza3v4lpU0p7_LM6NoU0jdiEl5jxxmZZMLE
+Content-Type: application/json
+
+{
+    "storeId": "5f18325d6b8fba10a8ff6f5a",
+    "phone": {
+        "countryCode": "260",
+        "number": "975670360"
+    }
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "userName": "mark",
+    "password": "Cacnga@153."
+}
+
+### CREATE PRODUCT - only for authenicated users
+POST http://localhost:3000/product/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6Im1hcmsiLCJyb2xlcyI6W3sicHJpdmlsZWdlcyI6W10sIl9pZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YyIsIm5hbWUiOiJzZWxsZXIifV0sImVtcGxveWluZ1N0b3JlcyI6W3siX2lkIjoiNWYxODMyNWQ2YjhmYmExMGE4ZmY2ZjVkIiwic3RvcmVJZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YSIsInN0b3JlTmFtZSI6Im1hcmt1c1Nob2VzIn1dfSwiaWF0IjoxNTk2NjU1NDgyLCJleHAiOjE1OTY2NTkwODJ9.54ExrmnoCM8NToC6uTkJeHQbzYtQT8hcPQUWWbTrIpg
+Content-Type: application/json
+
+{
+    "name": "Riddick Red shirt",
+    "storeId": "5f18325d6b8fba10a8ff6f5a",
+    "status": "online",
+    "productType": "simple",
+    "categories": [ {
+        "Products": {
+            "new": {
+                "Men_apostrophe_s_Fashion": {
+                    "Shoes": true
+                }
+            }
+        }
+    } ]
+
+}
+
+### UPDATE Product - Needs authorization
+PATCH http://localhost:3000/product/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6Im1hcmsiLCJyb2xlcyI6W3sicHJpdmlsZWdlcyI6W10sIl9pZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YyIsIm5hbWUiOiJzZWxsZXIifV0sImVtcGxveWluZ1N0b3JlcyI6W3siX2lkIjoiNWYxODMyNWQ2YjhmYmExMGE4ZmY2ZjVkIiwic3RvcmVJZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YSIsInN0b3JlTmFtZSI6Im1hcmt1c1Nob2VzIn1dfSwiaWF0IjoxNjAwNDU4NTc2LCJleHAiOjE2MDA0NjIxNzZ9.7-Jv_T1I5C65lxVQriSD_cDqUJlyHOkuPaqLnlabFho
+Content-Type: application/json
+
+{
+    "id": "5f2b07b516cc8f11682147b2",
+    "location": {
+        "longitude": "28.311552",
+        "latitude": "-15.4206208"
+    }
+}
+
+### Search for a PRODUCT - for public users, no authentication
+POST http://localhost:3000/product/search
+Content-Type: application/json
+
+{
+    "name": ""
+}
+
+### DELETE Product - Needs authorization
+DELETE http://localhost:3000/product/delete
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6Im1hcmsiLCJyb2xlcyI6W3sicHJpdmlsZWdlcyI6W10sIl9pZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YyIsIm5hbWUiOiJzZWxsZXIifV0sImVtcGxveWluZ1N0b3JlcyI6W3siX2lkIjoiNWYxODMyNWQ2YjhmYmExMGE4ZmY2ZjVkIiwic3RvcmVJZCI6IjVmMTgzMjVkNmI4ZmJhMTBhOGZmNmY1YSIsInN0b3JlTmFtZSI6Im1hcmt1c1Nob2VzIn1dfSwiaWF0IjoxNTk2NTMxNjU3LCJleHAiOjE1OTY1MzUyNTd9.fj2Qw-tA-NtWfye_pnrISNvwlQQsgO8YCNMmGBuMTP4
+Content-Type: application/json
+
+{
+    "id": "5f1debe9b6b4b23ed4659a11"
+}
+
+
+### REGISTER A USER
+POST http://localhost:3000/register/buyer
+Content-Type: application/json
+
+{
+    "userName": "cacious8",
+    "firstName": "cacious",
+    "lastName": "siamunyanga",
+    "email": "cacious8@hotmail.com",
+    "password": "Cacnga@153."
+}
+
+### REGISTER A SELLER
+POST http://localhost:3000/register/seller
+Content-Type: application/json
+
+{
+    "userName": "mark",
+    "firstName": "markus",
+    "lastName": "phiri",
+    "userEmail": "mark@outlook.com",
+    "storeName": "markusShoes",
+    "password": "Cacnga@153."
+}
+
+### CATEGORY LIST
+GET http://localhost:3000/category/list
+
+### TAG LIST
+GET http://localhost:3000/tag/list
+
+### HOME PAGE
+GET http://localhost:3000/
